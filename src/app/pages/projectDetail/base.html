@@ -1,0 +1,95 @@
+<h4 class="grid-h">Infomation</h4>
+
+<!--プロジェクト名-->
+<div class="row ">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="col-xs-3" style="height: 50px;padding: 10px;">
+      Project Name
+    </div>
+    <div class="col-xs-9" style="height: 50px;">
+      <input type="text" class="form-control" id="input01" placeholder="Laocon">
+    </div>
+  </div>
+</div>
+
+<!--優先度、懸賞金設定-->
+<div class="row ">
+  <div class="col-md-6">
+      <div class="col-xs-3" style="height: 50px;padding: 10px;">
+        Priority:
+      </div>
+      <div class="col-xs-9" style="height: 50px;">
+        <input type="text" class="form-control" id="input01" placeholder="High,middle,low">
+      </div>
+    </div>
+  <div class="col-md-6">
+    <div class="col-xs-3" style="height: 50px;padding: 10px;">
+      Deposit&nbsp;&nbsp;LC:
+    </div>
+    <div class="col-xs-9" style="height: 50px;">
+      <input type="text" class="form-control" id="input01" placeholder="290">
+    </div>
+  </div>
+</div>
+
+<!--環境情報-->
+<div class="row ">
+  <div class="col-md-12">
+    <div class="col-xs-3" style="height: 50px;padding: 10px;">
+      Devices
+    </div>
+    <div class="col-xs-9" style="height: 50px;">
+      <input type="text" class="form-control" id="input01" placeholder="Web,iOS application,Android application">
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="col-xs-3" style="height: 50px;padding: 10px;">
+      Environment
+    </div>
+    <div class="col-xs-9" style="height: 50px;">
+      <input type="text" class="form-control" id="input01" placeholder="IP address or N/A">
+    </div>
+  </div>
+</div>
+
+<!--概要とアタッチメント-->
+<div class="row ">
+  <div class="col-md-12">
+    <div class="form-group">
+      Overview
+      <textarea placeholder="Default Input" class="form-control" id="textarea01"></textarea>
+    </div>
+  </div>
+  <div class="col-md-6 col-md-offset-6">
+    <div class="form-group">
+      Attachment
+      <input type="file">
+    </div>
+  </div>
+</div>
+
+
+<!--タグと期限-->
+<div class="row ">
+  <div class="col-md-6">
+    <h4>Add tags</h4> 
+    <div class="form-group">
+      <input type="text" tag-input="danger" value="Android,iOS,Web,Java,Blockchain" data-role="tagsinput" placeholder="Add Tag">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Deadline</h4>
+    <div class="col-xlg-6 col-md-12 col-sm-6" ng-controller="datepickerCtrl">
+      <label>Selected date is: <em>{{dt | date:'fullDate' }}</em></label>
+      <div class="uib-datepicker-wrap">
+          <uib-datepicker ng-model="dt" datepicker-options="options"></uib-datepicker>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <section class="col-md-12" style="text-align: center;">
+    <button progress-button="progressFunction()" pb-style="rotate-angle-left" class="btn btn-info">Edit</button>
+  </section>
+</div>
